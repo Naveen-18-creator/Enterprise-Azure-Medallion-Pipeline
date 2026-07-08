@@ -1,12 +1,5 @@
-.env
-
 __pycache__/
 *.pyc
-
+.env
 .vscode/
-.idea/
-
-logs/
-*.log
-
-output/
+.ipynb_checkpoints/
