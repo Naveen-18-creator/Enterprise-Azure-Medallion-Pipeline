@@ -14,7 +14,7 @@ def generate_formet(dataset,batch_id):
 
     timestamp=now.strftime("%Y%m%d_%H%M%S")
 
-    return f"{dataset}/{year}/{month}/{day}/{dataset}_batch{batch_id}_{timestamp}.json"
+    return f"raw/{dataset}/{year}/{month}/{day}/{dataset}_batch{batch_id}_{timestamp}.json"
 
 
 def upload_dataset(dataset,records,batch_id):
@@ -32,7 +32,7 @@ def upload_dataset(dataset,records,batch_id):
 
     blob_client.upload_blob(
         json_data,
-        overwrite=False
+        overwrite=True
     )
     print(f"{dataset.upper()} Uploaded")
     print(blob_name)
